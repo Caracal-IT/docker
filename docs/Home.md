@@ -1,4 +1,5 @@
 # Docker
+
 ![Docker, the Docker mascot](assets/images/docker.png)
 
 ## Commands
