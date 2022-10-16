@@ -1,12 +1,12 @@
 # <font color="#2496ed">Docker</font>
-![Tux, the Linux mascot](assets/images/docker.png)
+![Docker, the Docker mascot](assets/images/docker.png)
 
-## <font color="#2496ed">Commands</font>
-### <font color="#2496ed">Build</font>
+## Commands
+### Build
 `docker build .`
-### <font color="#2496ed">Run<font>
+### Run
 `docker run -p 3000:3000 8a1c26431a`
-### <font color="#2496ed">List Containers</font>
+### List Containers
 `docker ps`
-### <font color="#2496ed">Stop Container</font>
+### Stop Container
 `docker stop vigorous_dirac`
