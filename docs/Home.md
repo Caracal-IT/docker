@@ -1,4 +1,4 @@
-# <font color="#2496ed">Docker</font>
+# $$\textcolor{#2496ed}{Docker}$$
 ![Docker, the Docker mascot](assets/images/docker.png)
 
 ## Commands
