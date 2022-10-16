@@ -1,0 +1,24 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "description": "The docker course",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish_docs": "git subtree push --prefix docs wiki master",
+    "pull_docs": "git subtree pull --prefix docs wiki master --squash --message=\"Merge wiki updates into docs.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caracal-IT/docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caracal-IT/docker/issues"
+  },
+  "homepage": "https://github.com/Caracal-IT/docker#readme"
+}
