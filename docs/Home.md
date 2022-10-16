@@ -1,6 +1,6 @@
 # Docker
 
-![Docker, the Docker mascot](/docs/assets/images/docker.png)
+![Docker, the Docker mascot](~/docs/assets/images/docker.png)
 
 ## Commands
 ### Build
