@@ -9,3 +9,7 @@
 `docker ps`
 ### Stop Container
 `docker stop vigorous_dirac`
+
+git subtree push --prefix docs wiki master
+
+git subtree pull --prefix docs wiki master --squash --message="Merge wiki updates into docs."
