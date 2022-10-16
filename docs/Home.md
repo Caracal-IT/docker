@@ -1,13 +1,13 @@
-# Docker
+# <font color="#2EA3F2">Docker</font>
 
 ![Docker, the Docker mascot](assets/images/docker.png)
 
-## Commands
-### Build
-`docker build .`
-### Run
-`docker run -p 3000:3000 8a1c26431a`
-### List Containers
-`docker ps`
-### Stop Container
-`docker stop vigorous_dirac`
+## <font color="#2EA3F2">Commands</font>
+
+| name                | Description                                                  | Command                               |
+| ---                 | -----------                                                  |----                                   |
+| **Build**           | Build the image                                              | `docker build .`                      |
+| **Run**             | Run the image with id starting with 8a1c26431a on port 3000  | `docker run -p 3000:3000 8a1c26431a`  |
+| **List Containers** | List the running containers                                  | `docker ps`                           |
+| **Stop Container**  | Stop the container with name 'vigorous_dirac'                | `docker stop 'vigorous_dirac`         |
+
