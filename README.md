@@ -1,11 +1,11 @@
-#Docker
+# Docker
 
-##Commands
-###Build
+## Commands
+### Build
 `docker build .`
-###Run
+### Run
 `docker run -p 3000:3000 8a1c26431a`
-###List Containers
+### List Containers
 `docker ps`
-###Stop Container
+### Stop Container
 `docker stop vigorous_dirac`
