@@ -10,14 +10,16 @@ Using Docker, you can quickly deploy and scale applications into any environment
 
 ## <font color="#2EA3F2">Commands</font>
 
-| Name                | Description                     | Command                              |
-| ---                 | -----------                     |----                                  |
-| **Pull**            | Get image from docker hub       | `docker pull node`                   |
-| **Build**           | Build the image                 | `docker build .`                     |
-| **Run**             | Run the image on port 3000      | `docker run -p 3000:3000 8a1c26431a` |
-| **List Containers** | List the running containers     | `docker ps`                          |
-| **List Containers** | List all the containers         | `docker ps -a`                       |
-| **Stop Container**  | Stop container 'vigorous_dirac' | `docker stop vigorous_dirac`         |
+| Name                | Description                          | Command                                 |
+| ---                 | -----------                          |----                                     |
+| **Pull**            | Get image from docker hub            | `docker pull node`                      |
+| **Build**           | Build the image                      | `docker build .`                        |
+| **Run**             | Run the image on port 3000           | `docker run -p 3000:3000 8a1c26431a`    |
+| **Run**             | Run the image on port 3000 detatched | `docker run -d -p 3000:3000 8a1c26431a` |
+| **List Containers** | List the running containers          | `docker ps`                             |
+| **List Containers** | List all the containers              | `docker ps -a`                          |
+| **Stop Container**  | Stop container 'vigorous_dirac'      | `docker stop vigorous_dirac`            |
+| **Start Container** | Restart container 'vigorous_dirac'   | `docker start vigorous_dirac`           |
 
 | Name                | Description                              | Command                     |
 | ---                 | -----------                              |----                         |
