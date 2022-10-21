@@ -10,17 +10,28 @@ Using Docker, you can quickly deploy and scale applications into any environment
 
 ## <font color="#2EA3F2">Commands</font>
 
-| Name                | Description                          | Command                                 |
-| ---                 | -----------                          |----                                     |
-| **Pull**            | Get image from docker hub            | `docker pull node`                      |
-| **Build**           | Build the image                      | `docker build .`                        |
-| **Run**             | Run the image on port 3000           | `docker run -p 3000:3000 8a1c26431a`    |
-| **Run**             | Run the image on port 3000 detatched | `docker run -d -p 3000:3000 8a1c26431a` |
-| **List Containers** | List the running containers          | `docker ps`                             |
-| **List Containers** | List all the containers              | `docker ps -a`                          |
-| **Stop Container**  | Stop container 'vigorous_dirac'      | `docker stop vigorous_dirac`            |
-| **Start Container** | Restart container 'vigorous_dirac'   | `docker start vigorous_dirac`           |
+| Name                 | Description                                                 | Command                                  |
+| ---                  | -----------                                                 |----                                      |
+| **Pull**             | Get image from docker hub                                   | `docker pull node`                       |
+| **Build**            | Build the image                                             | `docker build .`                         |
+| **Run**              | Run the image on port 3000                                  | `docker run -p 3000:3000 8a1c26431a`     |
+| **Run**              | Run the image on port 3000 detatched                        | `docker run -d -p 3000:3000 8a1c26431a`  |
+| **List Containers**  | List the running containers                                 | `docker ps`                              |
+| **List Containers**  | List all the containers                                     | `docker ps -a`                           |
+| **Stop Container**   | Stop container 'vigorous_dirac'                             | `docker stop vigorous_dirac`             |
+| **Start Container**  | Restart container 'vigorous_dirac'                          | `docker start vigorous_dirac`            |
+| **Start Container**  | Restart container 'vigorous_dirac' attached                 | `docker start -a vigorous_dirac`         |
+| **Start Container**  | Restart container 'vigorous_dirac' attached interactive     | `docker start -a -i vigorous_dirac`      |
+| **Attach Container** | Attach to container 'vigorous_dirac'                        | `docker attach vigorous_dirac`           |
+| **Get Logs**         | Get logs from container 'vigorous_dirac'                    | `docker logs vigorous_dirac`             |
+| **Follow Logs**      | Listen for logs from container 'vigorous_dirac'             | `docker logs -f vigorous_dirac`          |
+| **Remove Container** | Remove a container that is not running                      | `docker rm vigorous_dirac`               |
+| **Remove Container** | Remove a container that is not running                      | `docker container prune`                 |
+| **List Images**      | List the images                                             | `docker images`                          |
+| **Remove Images**    | Remove images                                               | `docker rmi 748384756`                   |
+| **Remove Images**    | Remove images with no running containers                    | `docker image prune`                     |
+
 
 | Name                | Description                              | Command                     |
 | ---                 | -----------                              |----                         |
-| **Node Runr**       | Run a NodeJs server in interactive mode  | `dockerrun -it node`        |
+| **Node Runr**       | Run a NodeJs server in interactive mode  | `docker run -it node`       |
