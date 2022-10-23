@@ -27,10 +27,12 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Follow Logs**      | Listen for logs from container 'vigorous_dirac'             | `docker logs -f vigorous_dirac`          |
 | **Remove Container** | Remove a container that is not running                      | `docker rm vigorous_dirac`               |
 | **Remove Container** | Remove a container that is not running                      | `docker container prune`                 |
+| **Auto Delete**      | Run the image on port 3000 and delete when stopped          | `docker run -p 3000:3000 --rm 8a1c2641a` |
 | **List Images**      | List the images                                             | `docker images`                          |
 | **Remove Images**    | Remove images                                               | `docker rmi 748384756`                   |
 | **Remove Images**    | Remove images with no running containers                    | `docker image prune`                     |
-
+| **Inspect Info**     | Get more information about the image                        | `docker image inspect 8a1c2641a`         |
+| **Copy**             | Copy files from or into a running container                 | `docker cp dummy/. boring_vaughn:/test`  |
 
 | Name                | Description                              | Command                     |
 | ---                 | -----------                              |----                         |
