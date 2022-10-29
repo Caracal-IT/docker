@@ -36,7 +36,7 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Inspect Info**     | Get more information about the image                        | `docker image inspect 8a1c2641a`                     |
 | **Copy**             | Copy files from or into a running container                 | `docker cp dummy/. boring_vaughn:/test`              |
 | **Publish**          | Publish image to Docker Hub                                 | `docker push caracal/springboot_api`                 |
-
+| **Volume**           | Display the volumes                                         | `docker volume ls`                                   |
 
 
 | Name                | Description                              | Command                     |
