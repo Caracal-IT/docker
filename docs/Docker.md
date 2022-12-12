@@ -37,8 +37,16 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Copy**             | Copy files from or into a running container                 | `docker cp dummy/. boring_vaughn:/test`              |
 | **Publish**          | Publish image to Docker Hub                                 | `docker push caracal/springboot_api`                 |
 | **Volume**           | Display the volumes                                         | `docker volume ls`                                   |
+| **Named Volume**     | Create volume on client                                     | `docker run -p 3000:3000 -v feedback:app/fback 444a` |
+| **Remove Volume**    | Remove volume on client                                     | `docker volume prune`                                |
+| **Remove Volume**    | Remove volume on client                                     | `docker volume rm VOL_NAME`                          |
+| **Bind Mount**       | Create volume on client                                     | `docker run -p 3000:3000 -v dir:app/fback 444a`      |
+| **Add Network**      | Add a network to the container                              | `docker run --network my_network`                    |
 
 
 | Name                | Description                              | Command                     |
 | ---                 | -----------                              |----                         |
-| **Node Runr**       | Run a NodeJs server in interactive mode  | `docker run -it node`       |
+| **Node Run**        | Run a NodeJs server in interactive mode  | `docker run -it node`       |
+| **Access host ip**  | Call localhost from within the container | `host.docker.internal`      |
+
+https://headsigned.com/posts/mounting-docker-volumes-with-docker-toolbox-for-windows/
