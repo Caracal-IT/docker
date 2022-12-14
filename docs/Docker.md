@@ -41,7 +41,8 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Remove Volume**    | Remove volume on client                                     | `docker volume prune`                                |
 | **Remove Volume**    | Remove volume on client                                     | `docker volume rm VOL_NAME`                          |
 | **Bind Mount**       | Create volume on client                                     | `docker run -p 3000:3000 -v dir:app/fback 444a`      |
-| **Add Network**      | Add a network to the container                              | `docker run --network my_network`                    |
+| **Add Network**      | Add a network to the container (Create network yourself)    | `docker run --network my_network`                    |
+| **Create Network**   | Create a docker network                                     | `docker network create my_network`                   |
 
 
 | Name                | Description                              | Command                     |
