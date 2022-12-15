@@ -51,3 +51,32 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Access host ip**  | Call localhost from within the container | `host.docker.internal`      |
 
 https://headsigned.com/posts/mounting-docker-volumes-with-docker-toolbox-for-windows/
+
+docker build -t kub-first-app . 
+
+ <font color="#2EA3F2">Kubernetes</font>
+ kubectl create deployment first-app --image=caracal/kub-first-app
+ kubectl get deployments
+ kubectl get pods
+ kubectl delete deployment first-app
+
+// Add service to get to pod
+kubectl expose deployment first-app --type=LoadBalancer --port=8080 
+kubectl expose deployment first-app --type=NodePort --port=8080 
+
+kubectl get services
+
+// Scale
+kubectl scale deployment/first-app --replicas=3
+
+
+ install dashboard
+ https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
+ https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.6.1/aio/deploy/recommended.yaml
+
+ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+
+ run kubectl proxy to access dashboard
+access dashboard
+  http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.
