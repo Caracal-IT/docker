@@ -60,6 +60,18 @@ docker build -t kub-first-app .
  kubectl get pods
  kubectl delete deployment first-app
 
+update deployments (Coontainer for name), need different tags
+kubectl set image deployment/first-app kub-first-app=caracal/kub-first-app:2
+kubectl rollout status deployment/first-app
+
+Rollback
+kubectl rollout undo deployment/first-app
+kubectl rollout history deployment/first-app
+kubectl rollout history deployment/first-app --revision=3
+
+kubectl rollout undo deployment/first-app --to-revision=2
+
+
 // Add service to get to pod
 kubectl expose deployment first-app --type=LoadBalancer --port=8080 
 kubectl expose deployment first-app --type=NodePort --port=8080 
@@ -68,6 +80,13 @@ kubectl get services
 
 // Scale
 kubectl scale deployment/first-app --replicas=3
+
+// Deplyment file
+kubectl apply -f deployment.yaml
+// Delete
+kubectl delete -f deployment.yaml
+// Delete with labels
+kubectl delete deployments, services -l group=example
 
 
  install dashboard
