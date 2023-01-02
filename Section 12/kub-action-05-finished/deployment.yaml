@@ -2,30 +2,31 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: second-app-deployment
-  labels: 
+  labels:
     group: example
 spec:
-  replicas: 3
+  replicas: 1
   selector:
-    #matchLabels:
-    #  app: second-app
-    #  tier: backend
-    matchExpressions:
-      - { key: app, operator: In, values: [second-app, first-app] }
-  template: 
-    metadata:
+    matchLabels:
+      app: second-app
+      tier: backend
+    # matchExpressions: 
+    #   - {key: app, operator: NotIn, values: [second-app, first-app]}
+  template:
+    metadata: 
       labels:
         app: second-app
         tier: backend
-    spec:
+    spec: 
       containers:
         - name: second-node
-          image: caracal/kub-first-app:2
+          image: academind/kub-first-app:2
           imagePullPolicy: Always
-          livenessProbe:
-            httpGet: 
+          livenessProbe: 
+            httpGet:
               path: /
               port: 8080
             periodSeconds: 10
             initialDelaySeconds: 5
- 
+        # - name: ...
+        #   image: ...

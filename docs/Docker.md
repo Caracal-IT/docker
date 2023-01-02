@@ -86,7 +86,7 @@ kubectl apply -f deployment.yaml
 // Delete
 kubectl delete -f deployment.yaml
 // Delete with labels
-kubectl delete deployments, services -l group=example
+kubectl delete deployments,services -l group=example
 
 
  install dashboard
