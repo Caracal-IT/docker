@@ -36,3 +36,7 @@ If the GitHub website is used to edit wiki files, the push will fail, in which c
 It should only be necessary to pull updates directly from the wiki when the GitHub website is used to edit the documentation directly in the wiki. If pushing to the wiki ever fails, try pulling first.
 
     git subtree pull --prefix docs wiki master --squash --message="Merge wiki updates into docs."
+
+
+
+    docker run --rm -it -v /Users/ettienemare/Documents/Development/Divigraph:/docs -p 3000:3000 dannyben/madness server
