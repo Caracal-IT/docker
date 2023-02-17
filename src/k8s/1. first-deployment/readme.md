@@ -40,7 +40,6 @@ Follow the following steps to deply to k8s.
    
    ```code
    kubectl expose deployment first-app --type=LoadBalancer --port=8080 
-
    ```
 
    |Type|Description|
@@ -79,9 +78,29 @@ Follow the following steps to deply to k8s.
     kubectl rollout status deployment/first-app
     ```
 
-12. wwwwww 
+12. Rollback latest delpoyment
+    
+    ```code
+    kubectl rollout undo deployment/first-app
+    ```
 
+13. Get the history
+ 
+    ```code
+    kubectl rollout history deployment/first-app --revision=3
+    ```
 
+13. Delete the service
+ 
+    ```code
+    kubectl delete service first-app
+    ```
+
+13. Delete the deployment
+ 
+    ```code
+    kubectl delete deployment first-app
+    ```
 
 Notes:
 Load Balancer
