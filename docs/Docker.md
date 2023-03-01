@@ -1,6 +1,8 @@
 # <font color="#2EA3F2">Docker</font>
 Docker is a software platform that allows you to build, test, and deploy applications quickly.
 
+Play with Docker - https://labs.play-with-docker.com
+
 Docker packages software into standardized units called containers that have everything the  
 software needs to run including libraries, system tools, code, and runtime. 
 
@@ -50,43 +52,14 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Node Run**        | Run a NodeJs server in interactive mode  | `docker run -it node`       |
 | **Access host ip**  | Call localhost from within the container | `host.docker.internal`      |
 
+##  Resources
+
+|Resource|Location|
+|---|---|
+|GitHub|https://github.com/bretfisher/udemy-docker-mastery|
+
+
 https://headsigned.com/posts/mounting-docker-volumes-with-docker-toolbox-for-windows/
-
-docker build -t kub-first-app . 
-
- <font color="#2EA3F2">Kubernetes</font>
- kubectl create deployment first-app --image=caracal/kub-first-app
- kubectl get deployments
- kubectl get pods
- kubectl delete deployment first-app
-
-update deployments (Coontainer for name), need different tags
-kubectl set image deployment/first-app kub-first-app=caracal/kub-first-app:2
-kubectl rollout status deployment/first-app
-
-Rollback
-kubectl rollout undo deployment/first-app
-kubectl rollout history deployment/first-app
-kubectl rollout history deployment/first-app --revision=3
-
-kubectl rollout undo deployment/first-app --to-revision=2
-
-
-// Add service to get to pod
-kubectl expose deployment first-app --type=LoadBalancer --port=8080 
-kubectl expose deployment first-app --type=NodePort --port=8080 
-
-kubectl get services
-
-// Scale
-kubectl scale deployment/first-app --replicas=3
-
-// Deplyment file
-kubectl apply -f deployment.yaml
-// Delete
-kubectl delete -f deployment.yaml
-// Delete with labels
-kubectl delete deployments,services -l group=example
 
 
  install dashboard
