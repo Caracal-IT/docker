@@ -45,12 +45,30 @@ Using Docker, you can quickly deploy and scale applications into any environment
 | **Bind Mount**       | Create volume on client                                     | `docker run -p 3000:3000 -v dir:app/fback 444a`      |
 | **Add Network**      | Add a network to the container (Create network yourself)    | `docker run --network my_network`                    |
 | **Create Network**   | Create a docker network                                     | `docker network create my_network`                   |
+| **Combine Compose**  | Combine multiple docker files                               |`docker compose -f f1.yml -f f2.yml config > f3.yml`  |
 
 
 | Name                | Description                              | Command                     |
 | ---                 | -----------                              |----                         |
 | **Node Run**        | Run a NodeJs server in interactive mode  | `docker run -it node`       |
 | **Access host ip**  | Call localhost from within the container | `host.docker.internal`      |
+
+## Docker Swarm
+
+| Name     | Description                              | Command                     |
+| ---      | -----------                              |----                         |
+| **Info** | Check if swarm is activated| docker info | docker info |
+| **Initialize**|Initialize docker swarm|docker swarm init |
+| **View Nodes**  |View the swarm nodes| docker node ls |
+| **Service** |This replaces docker run| docker service |
+| **Createe** | Give it orders  | docker service apline ping 8.8.8.8 |
+| **List Service** | List the services | docker service ls |
+| **List Service Info** | List the services info | docker service ps |
+| **Scale Up** | Scale the service | docker service update {{id or name}} replicas 3 |
+| **Remove Service** | Remove the service | docker swarm rm {{service name}} |
+
+play-with-docker.com
+get.docker.com -> install scripts
 
 ##  Resources
 
