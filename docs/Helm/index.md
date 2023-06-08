@@ -296,3 +296,30 @@ The installation can still be broken, for example if the registry is incorrect.
 helm uninstall nginx01
 ```
 
+## Tips
+
+1. Auto-generate a release name
+   
+    ``` code
+    helm install bitnami/nginx --generate-name
+    ```
+
+2. Auto-generate namespace
+
+    ``` code
+    helm install nginx01 -n apps bitnami/nginx --create-namespace
+    ```
+
+3. Install the release or upgrade if it already exists
+   
+   ``` code
+   helm upgrade --install nginx01 --set service.ports.http=8080 bitnami/nginx
+   ```
+
+4. Verify that the application is running
+
+    ``` code
+    helm upgrade --install nginx01 --set service.ports.http=8080 bitnami/nginx --wait --timeout 10s
+    ```
+
+5. weewew
