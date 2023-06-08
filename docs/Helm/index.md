@@ -197,3 +197,102 @@ Uninstall installations in default namespace
 ``` code
 helm uninstall nginx02 -n default
 ```
+
+## Dry run
+
+Dry run will show the intended output on the screen.
+
+``` code
+helm install nginx03 --values values.yaml --set service.ports.http=8080 bitnami/nginx
+```
+
+## Get Release Details
+
+Install a release
+
+``` code
+helm install nginx01 bitnami/nginx
+```
+
+List the installs
+
+``` code
+helm list
+```
+
+Get Details
+
+``` code
+helm get notes nginx01
+```
+
+User Values
+
+``` code
+helm get values nginx01
+```
+
+User Values and Defaults
+
+``` code
+helm get values nginx01 --all
+```
+
+Get Deployment Values
+
+``` code
+helm get manifest nginx01
+```
+
+Delete Release
+
+``` code
+helm uninstall nginx01
+```
+
+## Release History
+
+Install 
+
+``` code
+helm install nginx01 bitnami/nginx
+```
+
+Upgrade
+
+``` code
+helm upgrade nginx01 --set service.type=foobar bitnami/nginx
+```
+
+History
+
+``` code
+helm history nginx01
+```
+
+Rollback
+
+``` code
+helm rollback nginx01 1
+```
+
+Uninstall and keep history
+
+``` code
+helm uninstall nginx01 --keep-history
+```
+
+Rollback
+
+``` code
+helm rollback nginx01 4
+```
+
+**NOTE**  
+faild status will only show if kubernetes reject the manifest.  
+The installation can still be broken, for example if the registry is incorrect.
+
+``` code
+helm uninstall nginx01
+```
+
