@@ -321,5 +321,3 @@ helm uninstall nginx01
     ``` code
     helm upgrade --install nginx01 --set service.ports.http=8080 bitnami/nginx --wait --timeout 10s
     ```
-
-5. weewew
