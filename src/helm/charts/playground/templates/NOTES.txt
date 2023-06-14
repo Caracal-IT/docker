@@ -1,0 +1,17 @@
+The name of this chart is {{ .Chart.Name }}, 
+its version is {{ .Chart.Version }} 
+and the bundled application version is {{ .Chart.AppVersion }}
+
+The release name is  {{ .Release.Name }} and it will be
+installed in the {{ .Release.Namespace }} namespace.
+
+Is this a new Installation ? {{ .Release.IsInstall }}
+Is this an upgrade ? {{ .Release.IsUpgrade }}
+
+The version of kubernetes on this cluster is {{ .Capabilities.KubeVersion }}
+
+{{  toYaml .Chart.Name | nindent 12 }}
+
+Resources:
+
+  {{- toYaml .Values.resources | nindent 2 }}
